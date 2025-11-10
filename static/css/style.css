@@ -1,0 +1,110 @@
+/* Base - Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e3a8a;
+  box-sizing: border-box;
+}
+
+/* Container - input & results */
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  background: #fff;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* Result page container - wider */
+.result-container {
+  max-width: 900px;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 180px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+button, .back-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+button:hover, .back-btn:hover {
+  background: #2563eb;
+}
+
+/* Table - result page */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #f1f5f9;
+  color: #1e3a8a;
+}
+
+tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 25px;
+  color: #475569;
+  font-weight: 500;
+}
+

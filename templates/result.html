@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container result-container">
+  <h1>Prediction Results</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Text</th>
+        <th>Prediction</th>
+        <th>Probability</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in predictions %}
+      <tr>
+        <td>{{ row['text'] }}</td>
+        <td>{{ row['prediction'] }}</td>
+        <td>{{ row['probability']|round(3) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/" class="back-btn">Back</a>
+</div>
+{% endblock %}
+
+

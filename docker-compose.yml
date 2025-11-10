@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  fake-news-api:
+    build: .
+    container_name: fake-news-api
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    command: python main.py
+
+
+
