@@ -1,0 +1,41 @@
+__install/
+__install/.build_hash
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# ML model outputs
+models/
+*.h5
+*.pt
+*.pkl
+*.joblib
+
+# Data files
+data/
+*.csv
+*.json
+*.txt
