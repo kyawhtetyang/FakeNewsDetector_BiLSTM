@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import re
 import string
@@ -5,6 +6,11 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+
+# Ensure Render/runtime NLTK data directory is checked first
+nltk_data_dir = os.getenv("NLTK_DATA")
+if nltk_data_dir and nltk_data_dir not in nltk.data.path:
+    nltk.data.path.insert(0, nltk_data_dir)
 
 
 def _resource_exists(resource: str) -> bool:
