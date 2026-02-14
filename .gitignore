@@ -27,30 +27,4 @@ Thumbs.db
 .vscode/
 .idea/
 
-# ML model outputs
-models/
-*.h5
-*.pt
-*.pkl
-*.joblib
-
-# Data files
-data/
-*.csv
-*.json
-*.txt
-
 *.db
-
-# Allow Render Python runtime pin
-!backend/runtime.txt
-
-!backend/config/
-!backend/config/config.json
-
-# Allow required backend inference artifacts for deployment
-!backend/output/
-!backend/output/models/
-!backend/output/models/fake_news_lstm.h5
-!backend/output/tokenizer.pkl
-!backend/output/class_names.json
