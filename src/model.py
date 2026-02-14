@@ -7,7 +7,7 @@ class BiLSTMMODEL:
     @staticmethod
     def build(max_words=10000, max_len=150, embedding_dim=128, lstm_units=64, dropout=0.3, num_classes=2):
         model = Sequential([
-            Embedding(max_words, embedding_dim, input_length=max_len),
+            Embedding(max_words, embedding_dim),
             Bidirectional(LSTM(lstm_units, dropout=dropout, recurrent_dropout=dropout)),
             Dropout(dropout),
             Dense(1 if num_classes==2 else num_classes, activation="sigmoid" if num_classes==2 else "softmax")

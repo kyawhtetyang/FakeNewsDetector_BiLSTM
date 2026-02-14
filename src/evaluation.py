@@ -19,7 +19,7 @@ class Evaluator:
         else:
             y_pred = np.argmax(y_pred_prob, axis=1)
 
-        print(classification_report(y_test, y_pred, target_names=class_names))
+        print(classification_report(y_test, y_pred, target_names=class_names, zero_division=0))
 
         cm = confusion_matrix(y_test, y_pred)
         plt.figure(figsize=(6, 5))
