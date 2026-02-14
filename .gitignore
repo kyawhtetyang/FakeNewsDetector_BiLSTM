@@ -47,3 +47,10 @@ data/
 
 !backend/config/
 !backend/config/config.json
+
+# Allow required backend inference artifacts for deployment
+!backend/output/
+!backend/output/models/
+!backend/output/models/fake_news_lstm.h5
+!backend/output/tokenizer.pkl
+!backend/output/class_names.json

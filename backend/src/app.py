@@ -59,8 +59,11 @@ def api_predict():
     if not text:
         return jsonify({"error": "Field 'text' is required."}), 400
 
-    df_pred = FakeNewsBiLSTM.predict_text(cfg, text)
-    row = df_pred.iloc[0].to_dict()
+    try:
+        df_pred = FakeNewsBiLSTM.predict_text(cfg, text)
+        row = df_pred.iloc[0].to_dict()
+    except Exception as exc:
+        return jsonify({"error": f"Prediction failed: {exc}"}), 500
 
     return jsonify(
         {
