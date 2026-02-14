@@ -41,3 +41,6 @@ data/
 *.txt
 
 *.db
+
+# Allow Render Python runtime pin
+!backend/runtime.txt

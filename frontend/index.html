@@ -40,6 +40,16 @@
     const apiBaseEl = document.getElementById('apiBase');
     const resultEl = document.getElementById('result');
 
+    const PROD_API_BASE = 'https://YOUR-RENDER-URL.onrender.com';
+    const isLocalHost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    const queryApiBase = new URLSearchParams(window.location.search).get('apiBase');
+
+    const resolvedApiBase = queryApiBase
+      || localStorage.getItem('apiBase')
+      || (isLocalHost ? 'http://127.0.0.1:5001' : PROD_API_BASE);
+
+    apiBaseEl.value = resolvedApiBase;
+
     runBtn.addEventListener('click', async () => {
       const text = textEl.value.trim();
       if (!text) return;
@@ -50,6 +60,7 @@
 
       try {
         const base = apiBaseEl.value.trim().replace(/\/$/, '');
+        localStorage.setItem('apiBase', base);
         const res = await fetch(`${base}/api/predict`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
