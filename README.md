@@ -53,7 +53,14 @@ Response:
 
 ## Local Run (Frontend)
 
-Open `frontend/index.html` in browser and set backend URL field if needed.
+Run a local static server for frontend:
+
+```bash
+cd frontend
+python -m http.server 5173
+```
+
+Then open `http://127.0.0.1:5173` and keep backend URL as `http://127.0.0.1:5001`.
 
 ## Deployment
 
