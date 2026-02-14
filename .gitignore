@@ -44,3 +44,6 @@ data/
 
 # Allow Render Python runtime pin
 !backend/runtime.txt
+
+!backend/config/
+!backend/config/config.json

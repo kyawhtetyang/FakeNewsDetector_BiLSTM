@@ -1,0 +1,21 @@
+{
+  "max_words": 10000,
+  "max_len": 150,
+  "embedding_dim": 128,
+  "lstm_units": 64,
+  "dropout": 0.3,
+  "batch_size": 32,
+  "epochs": 20,
+  "model_dir": "output/models",
+  "model_version": "v1",
+  "model_path": "output/models/fake_news_lstm.h5",
+  "tokenizer_path": "output/tokenizer.pkl",
+  "class_names_path": "output/class_names.json",
+  "prediction_output": "output/predictions.csv",
+  "experiment_log": "output/experiments.csv",
+  "random_seed": 42,
+  "processed_csv": "data/processed/fake_news_clean.csv",
+  "to_predict_csv": "data/raw/news_to_predict.csv"
+
+}
+
