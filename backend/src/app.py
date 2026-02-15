@@ -22,9 +22,13 @@ def add_cors_headers(response):
 
     is_local = origin in {"http://127.0.0.1:5173", "http://localhost:5173"}
     is_vercel = origin.startswith("https://") and origin.endswith(".vercel.app")
+    is_custom_frontend = origin in {
+        "https://fake-news.kyawhtet.com",
+        "https://fake-news-detector-bi-lstm.vercel.app",
+    }
     is_file_origin = origin == "null"
 
-    if is_local or is_vercel or is_file_origin:
+    if is_local or is_vercel or is_custom_frontend or is_file_origin:
         response.headers["Access-Control-Allow-Origin"] = origin or "*"
         response.headers["Vary"] = "Origin"
 
