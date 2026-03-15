@@ -30,6 +30,27 @@ v0/
 - Frontend (Vercel): `https://fake-news-detector-bi-lstm-bx1an8c5p.vercel.app`
 - Backend (Render): `https://fakenewsdetector-bilstm.onrender.com`
 
+## Setup Notes
+
+- NLTK data is required for preprocessing. Download once:
+
+```bash
+python -m nltk.downloader stopwords wordnet
+```
+
+- Dataset CSV is not included in this repo. Place it at `backend/data/raw/fake_news.csv`.
+- Required columns: `text`, `label` (0 = fake, 1 = real).
+
+To generate the cleaned dataset:
+
+```bash
+cd backend
+python generate_dataset.py
+```
+
+- Model artifacts are generated locally and not tracked in git.
+  Files: `backend/output/models/*.h5`, `backend/output/tokenizer.pkl`.
+
 ## Local Run (Backend)
 
 ```bash

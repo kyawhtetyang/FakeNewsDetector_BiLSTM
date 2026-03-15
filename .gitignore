@@ -19,6 +19,15 @@ ENV/
 # Logs
 *.log
 
+# Model artifacts / outputs
+backend/output/
+*.h5
+*.pkl
+
+# Dataset artifacts (keep placeholder README/.gitkeep)
+backend/data/raw/*.csv
+backend/data/processed/*.csv
+
 # OS generated files
 .DS_Store
 Thumbs.db
