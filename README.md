@@ -1,4 +1,4 @@
-# Fake News Detector v9 (BiLSTM)
+# Fake News Detector (BiLSTM)
 
 One repository with split deployment structure:
 - `backend/` Flask + TensorFlow inference API
@@ -7,7 +7,7 @@ One repository with split deployment structure:
 ## Structure
 
 ```text
-v9/
+v0/
   backend/
     src/
     pipeline/
@@ -23,8 +23,12 @@ v9/
     docker-compose.yml
   frontend/
     index.html
-    vercel.json
 ```
+
+## Live Demo
+
+- Frontend (Vercel): `https://fake-news-detector-bi-lstm-bx1an8c5p.vercel.app`
+- Backend (Render): `https://fakenewsdetector-bilstm.onrender.com`
 
 ## Local Run (Backend)
 
@@ -65,7 +69,7 @@ Then open `http://127.0.0.1:5173` and keep backend URL as `http://127.0.0.1:5001
 ## Deployment
 
 - Frontend: Vercel (root directory: `frontend`)
-- Backend: Render/VPS (root directory: `backend`)
+- Backend: Render (root directory: `backend`)
 
 ## Tests
 
